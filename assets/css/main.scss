@@ -206,3 +206,23 @@ html[data-theme="dark"] {
 .page__hero .wrapper {
   padding-top: var(--masthead-height) !important;
 }
+/* --- 本文中の画像の回り込み調整 --- */
+
+/* 画像を右寄せにして、左側に文字を回り込ませる */
+.align-right {
+  float: right;         /* 右に寄せる */
+  margin-left: 2em;     /* 左側の文字との間に余白を作る */
+  margin-bottom: 1em;   /* 下側の文字との間に余白を作る */
+  border-radius: 8px;   /* 角を少し丸くする（お好みで） */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* うっすら影をつける（お好みで） */
+}
+
+/* 画面が狭いスマホでは、回り込みを解除して縦に並べる */
+@media (max-width: 600px) {
+  .align-right {
+    float: none;
+    margin: 1em auto;
+    display: block;
+    width: 100% !important; /* スマホでは横幅いっぱいに */
+  }
+}
