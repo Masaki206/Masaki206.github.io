@@ -64,17 +64,3 @@ html[data-theme='dark'] {
 h1, h2, h3 {
   color: var(--heading-color) !important;
 }
-/* 画像エリアの高さを強制的に確保する */
-.page__hero--overlay {
-  min-height: 400px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* 画像の上のタイトル文字を白く、大きくする */
-.page__hero--overlay h1 {
-  color: #fff !important;
-  font-size: 3em !important;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
