@@ -89,3 +89,28 @@ h1, h2, h3 {
   text-shadow: 2px 2px 15px rgba(0,0,0,0.7) !important;
   font-weight: bold !important;
 }
+/* ナビゲーションバー（マストヘッド）を透明にして画像に重ねる */
+.masthead {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent !important; /* 背景を透明にする */
+  border-bottom: none !important;           /* 下線を消す */
+  z-index: 10;                              /* 画像より前面に出す */
+}
+
+/* メニューの文字色を白にして、画像の上で見やすくする */
+.masthead__menu-item a {
+  color: #fff !important;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* 視認性向上のための影 */
+}
+
+/* ロゴ（左上の名前部分）も白くする */
+.site-title {
+  color: #fff !important;
+}
+
+/* ヘッダー画像自体の余白を調整して、メニューと被りすぎないようにする */
+.page__hero--overlay {
+  padding-top: 80px; /* メニューの高さ分、中のタイトルを少し下げる */
+}
