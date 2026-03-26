@@ -226,3 +226,11 @@ html[data-theme="dark"] {
     width: 100% !important; /* スマホでは横幅いっぱいに */
   }
 }
+/* 見出し（h2）の下線を、右側の画像に被らないように調整 */
+h2 {
+  display: block;
+  overflow: hidden; /* これにより、回り込んでいる要素（画像）を避けて線が止まります */
+  border-bottom: 1px solid #52adc8; /* 線を出す場合 */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
