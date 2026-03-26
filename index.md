@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: splash
 author_profile: false
 header:
   overlay_image: /assets/images/1774550014530.jpg
