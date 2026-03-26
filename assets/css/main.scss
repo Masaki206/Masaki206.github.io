@@ -76,7 +76,7 @@ h1, h2, h3 {
 
 /* 2. 本文の横幅を絞って、両端に「読みやすい余白」を作る */
 .archive, .page__content {
-  max-width: 1000px !important; /* 本文の最大幅をXXpxに制限 */
+  max-width: 900px !important; /* 本文の最大幅をXXpxに制限 */
   margin-left: auto !important;
   margin-right: auto !important;
   // padding: 2em 1em !important; /* 上下に余白を追加 */
@@ -99,18 +99,25 @@ h1, h2, h3 {
   z-index: 10;                              /* 画像より前面に出す */
 }
 
-/* メニューの文字色を白にして、画像の上で見やすくする */
-.masthead__menu-item a {
-  color: #fff !important;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* 視認性向上のため影を入れる */
+/* 1. ナビゲーションバー全体を画像の上に重ねる */
+.masthead {
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+  background-color: transparent !important; /* 背景を透明にする */
+  border-bottom: none !important;           /* 境界線を消す */
+  z-index: 100;                             /* 画像より手前に表示 */
 }
 
-/* ロゴ（左上の名前部分）も白くする */
+/* 2. メニューの文字を白くし、影をつけて読みやすくする */
+.masthead__menu-item a, 
 .site-title {
   color: #fff !important;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
+  font-weight: bold !important;
 }
 
-/* ヘッダー画像自体の余白を調整して、メニューと被りすぎないようにする */
+/* 3. ヘッダー画像自体の高さを確保し、中身がメニューに隠れないよう調整 */
 .page__hero--overlay {
-  padding-top: 80px; /* メニューの高さ分、中のタイトルを少し下げる */
+  padding-top: 100px !important; /* メニューの高さ分、中の名前を少し下げる */
 }
