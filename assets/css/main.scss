@@ -68,7 +68,7 @@ h1, h2, h3 {
 
 /* 1. ヘッダー画像（Hero）を大きくする */
 .page__hero--overlay {
-  min-height: 35vh !important; /* 画面の高さの60%を画像にする */
+  min-height: 35vh !important; /* 画面の高さのx%を画像にする */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -76,7 +76,7 @@ h1, h2, h3 {
 
 /* 2. 本文の横幅を絞って、両端に「読みやすい余白」を作る */
 .archive, .page__content {
-  max-width: 1000px !important; /* 本文の最大幅を800pxに制限 */
+  max-width: 1000px !important; /* 本文の最大幅をXXpxに制限 */
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 2em 1em !important; /* 上下に余白を追加 */
