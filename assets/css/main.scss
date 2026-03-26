@@ -90,10 +90,24 @@ h1, h2, h3 {
   font-weight: bold !important;
 }
 /* =========================
-   Header overlay behavior
+   Header overlay / scroll
    ========================= */
 
-/* ヘッダー全体を上に固定 */
+/* モードごとの色 */
+:root {
+  --header-solid-bg: rgba(255, 255, 255, 0.95);
+  --header-solid-text: #222;
+  --header-overlay-text: #fff;
+}
+
+/* ダークモード時 */
+html[data-theme="dark"] {
+  --header-solid-bg: rgba(80, 80, 80, 0.95);
+  --header-solid-text: #fff;
+  --header-overlay-text: #fff;
+}
+
+/* ヘッダー全体を固定 */
 .masthead {
   position: fixed !important;
   top: 0;
@@ -103,18 +117,19 @@ h1, h2, h3 {
   background: transparent !important;
   border-bottom: none !important;
   box-shadow: none !important;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* 内側の背景を全部消す */
+/* 内側は常に透明のまま */
 .masthead__inner-wrap,
 .masthead__menu,
 .greedy-nav,
 .greedy-nav .visible-links,
 .greedy-nav .visible-links::after,
-.greedy-nav .hidden-links,
+.greedy-nav .visible-links li,
+.greedy-nav .visible-links a,
 .masthead__menu ul,
-.masthead__menu-item,
-.navicon {
+.masthead__menu-item {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -127,27 +142,51 @@ h1, h2, h3 {
 .greedy-nav a:visited,
 .masthead__menu-item a,
 .masthead__menu-item a:visited,
-.greedy-nav__toggle {
-  color: #fff !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+.greedy-nav__toggle,
+.search__toggle {
+  color: var(--header-overlay-text) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-/* スクロール後だけ背景を出す */
-.masthead.scrolled,
-.masthead.scrolled .masthead__inner-wrap,
-.masthead.scrolled .masthead__menu,
-.masthead.scrolled .greedy-nav,
-.masthead.scrolled .greedy-nav .visible-links,
-.masthead.scrolled .masthead__menu ul {
-  background: rgba(80, 80, 80, 0.95) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+/* スクロール後はヘッダー全体に背景を付ける */
+.masthead.scrolled {
+  background: var(--header-solid-bg) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18) !important;
 }
 
-/* スクロール後も文字は白でOK */
+/* スクロール後は文字色を通常表示に */
 .masthead.scrolled .site-title,
+.masthead.scrolled .site-title:visited,
 .masthead.scrolled .greedy-nav a,
+.masthead.scrolled .greedy-nav a:visited,
 .masthead.scrolled .masthead__menu-item a,
-.masthead.scrolled .greedy-nav__toggle {
-  color: #fff !important;
+.masthead.scrolled .masthead__menu-item a:visited,
+.masthead.scrolled .greedy-nav__toggle,
+.masthead.scrolled .search__toggle {
+  color: var(--header-solid-text) !important;
   text-shadow: none !important;
 }
+
+/* 画像の上端の余白を詰める */
+.initial-content,
+#main,
+.page,
+.page__inner-wrap,
+.layout--single .initial-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ヒーロー画像まわりの余白も消す */
+.page__hero,
+.page__hero--overlay,
+.page__hero-image {
+  margin-top: 0 !important;
+}
+
+/* ヘッダーの高さぶんだけ画像タイトルが隠れないよう微調整したいなら必要に応じて使う
+.page__hero--overlay {
+  padding-top: 70px !important;
+}
+*/
