@@ -41,3 +41,21 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* モード共通の変数を定義 */
+:root {
+  /* ライトモード時の色 (#00a3af: ターコイズ系) */
+  --heading-color: #00a3af; 
+}
+
+/* ダークモードを検知した時の上書き設定 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ダークモード時の色 (#fcc800: 向日葵色) */
+    --heading-color: #fcc800; 
+  }
+}
+
+/* すべてのページの見出し (h1, h2, h3) にこの色を適用 */
+h1, h2, h3 {
+  color: var(--heading-color) !important;
+}
