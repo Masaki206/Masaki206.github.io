@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Masaki Inoue"
+title                    : "Masaki J. Inoue"
 title_separator          : "-"
 name                     : "Masaki Inoue"
 email                    : "masaki@ccs.tsukuba.ac.jp"
