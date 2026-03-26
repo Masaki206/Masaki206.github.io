@@ -8,26 +8,26 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "ホーム"
+    url: /
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "研究内容"
+    url: /research/    
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "業績"
+    url: /publications/    
     
   - title: "CV"
     url: /cv/
+
+  - title: "その他"
+    url: /other/
+
+  - title: "English"
+    url: /en/
     
   # - title: "CV"
   #   url: /cv-json/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/
