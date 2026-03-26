@@ -1,4 +1,4 @@
-## <span style="color: #6600cc;"About</span>
+## <span style="color: #6600cc;">About</span>
 
 筑波大学大学院宇宙物理理論研究室で主にブラックホールに関する研究を行っています。
 
