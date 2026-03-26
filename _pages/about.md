@@ -1,10 +1,10 @@
-## <span style="color: #4169e1;">About</span>
+## <span style="color: #00a3af;">About</span>
 
 筑波大学大学院宇宙物理理論研究室で主にブラックホールに関する研究を行っています。
 
 ブラックホール周囲に形成される降着円盤は、高光度コンパクト天体のエネルギー源と考えられています。私は特に超臨界降着円盤に興味を持っており、これに関する数値シミュレーションを実施しています。
 
-## <span style="color: #ffd700;">Profile</span>
+## <span style="color: #fcc800;">Profile</span>
 
 <span style="font-size: 1.5em; font-weight: bold;">名前: 井上 雅貴（いのうえ まさき）</span>
 
