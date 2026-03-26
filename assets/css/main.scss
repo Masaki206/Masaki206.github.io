@@ -51,6 +51,10 @@
 */
 html[data-theme='dark'] {
   --heading-color: #fcc800;
+   /* 背景色と文字色の設定 */
+  body {
+    background-color: #050505 !important; /* 漆黒（少しだけ質感を残した黒） */
+    color: #e0e0e0 !important;           /* 文字を真っ白ではなく少しグレーにすると目が疲れません */
 }
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
