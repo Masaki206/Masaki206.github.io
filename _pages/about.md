@@ -1,4 +1,10 @@
-# <span style="font-size: 1.5em;">井上 雅貴 / Masaki Inoue</span>
+---
+layout: home # あるいは archive
+title: "井上 雅貴 / Masaki Inoue" 
+header:
+  overlay_image: /assets/images/1774550014530.jpg
+  overlay_filter: 0.5 # 画像を少し暗くして、文字を見やすくする（0〜1）
+---
 
 ## About
 
