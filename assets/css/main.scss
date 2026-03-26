@@ -51,22 +51,6 @@
 */
 html[data-theme='dark'] {
   --heading-color: #fcc800;    /* 見出しの色（向日葵色） */
-  
-  /* 背景色と文字色の設定 */
-  body {
-    background-color: #050505 !important; /* 漆黒（少しだけ質感を残した黒） */
-    color: #e0e0e0 !important;           /* 文字を真っ白ではなく少しグレーにすると目が疲れません */
-  }
-
-  /* コンテンツエリアの背景も黒に統一 */
-  .page, .archive, .masthead, .page__footer {
-    background-color: #050505 !important;
-  }
-
-  /* 線の色を少し暗めにして浮かび上がらせる */
-  h2 {
-    border-bottom: 1px solid #333 !important;
-  }
 }
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
