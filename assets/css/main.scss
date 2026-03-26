@@ -228,28 +228,13 @@ html[data-theme="dark"] {
 }
 
 /* --- 見出しの線を画像の手前で止める --- */
-/* 1. 見出し(h2)自体に「右側の邪魔なものを避けろ」という命令を出す */
-h2 {
-  display: block !important;
-  overflow: hidden !important;   /* これが右側の画像を検知して線を止めます */
-  border-bottom: 1px solid #ccc; /* 線の色は適宜調整してください */
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  clear: none !important;        /* 画像の横に居座ることを許可 */
-}
-
-/* 2. 念のため、リスト(ul)も同様に制限する */
-ul {
-  display: block !important;
-  overflow: hidden !important;
-  padding-right: 15px;           /* 画像との間に少し隙間を作る */
-}
-
-/* 3. 画像(align-right)の設定も微調整 */
 .align-right {
-  float: right !important;
-  margin-left: 20px !important;
-  margin-bottom: 10px !important;
-  position: relative;            /* 階層をハッキリさせる */
-  z-index: 1;
+  float: right;
+  width: 250px;
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  overflow: hidden;
 }
