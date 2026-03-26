@@ -26,13 +26,13 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "井上雅貴"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "超臨界膠着円盤, GR-RMHDシミュレーション"
+  location         : "茨城県, 日本"
+  employer         : "筑波大学　博士前期課程1年　宇宙物理理論研究室　大須賀グループ"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "masaki@ccs.tsukuba.ac.jp" 
 
   # Academic websites
   academia         : # URL
