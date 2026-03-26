@@ -89,50 +89,60 @@ h1, h2, h3 {
   text-shadow: 2px 2px 15px rgba(0,0,0,0.7) !important;
   font-weight: bold !important;
 }
-/* ナビゲーションバー（マストヘッド）を透明にして画像に重ねる */
-.masthead {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: transparent !important; /* 背景を透明にする */
-  border-bottom: none !important;           /* 下線を消す */
-  z-index: 10;                              /* 画像より前面に出す */
-}
-/* ヘッダーを最前面に */
+/* =========================
+   Header overlay behavior
+   ========================= */
+
+/* ヘッダー自体は常に上に固定 */
 .masthead {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000 !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 内側の背景もまとめて制御 */
+.masthead,
+.masthead__inner-wrap,
+.greedy-nav {
   background: transparent !important;
   border-bottom: none !important;
   box-shadow: none !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ヘッダー内の横幅制限を外したい場合 */
-.masthead__inner-wrap {
-  background: transparent !important;
-}
-
-/* メニュー文字色 */
-.masthead__menu-item a,
+/* 画像上では文字を白に */
 .site-title,
-.greedy-nav a {
+.greedy-nav a,
+.masthead__menu-item a,
+.greedy-nav__toggle {
   color: #fff !important;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* ハンバーガーやアイコン類 */
-.greedy-nav .hidden-links,
-.greedy-nav__toggle,
-.search__toggle {
-  color: #fff !important;
+/* スクロール後の状態 */
+.masthead.scrolled,
+.masthead.scrolled .masthead__inner-wrap,
+.masthead.scrolled .greedy-nav {
+  background: rgba(80, 80, 80, 0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* 最初の画像をヘッダーの下に押し出さない */
+/* スクロール後は普通に見やすい文字 */
+.masthead.scrolled .site-title,
+.masthead.scrolled .greedy-nav a,
+.masthead.scrolled .masthead__menu-item a,
+.masthead.scrolled .greedy-nav__toggle {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+/* ページ上部がヘッダーの下に隠れないように調整 */
 .initial-content,
 #main {
-  margin-top: 0 !important;
   padding-top: 0 !important;
+  margin-top: 0 !important;
 }
