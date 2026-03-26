@@ -226,11 +226,15 @@ html[data-theme="dark"] {
     width: 100% !important; /* スマホでは横幅いっぱいに */
   }
 }
-/* 見出し（h2）の下線を、右側の画像に被らないように調整 */
+/* 箇条書きリスト（ul）も右側の画像を避けるようにする */
+ul {
+  display: block;
+  overflow: hidden; /* これで画像の左端でリストのエリアが止まります */
+}
+
+/* ついでに、Newsなどの見出しの線をより確実に止める設定 */
 h2 {
   display: block;
-  overflow: hidden; /* これにより、回り込んでいる要素（画像）を避けて線が止まります */
-  border-bottom: 1px solid #52adc8; /* 線を出す場合 */
-  padding-bottom: 5px;
-  margin-bottom: 20px;
+  overflow: hidden;
+  clear: none !important; /* 画像の横に居続ける */
 }
