@@ -98,26 +98,24 @@ h1, h2, h3 {
   border-bottom: none !important;           /* 下線を消す */
   z-index: 10;                              /* 画像より前面に出す */
 }
-
-/* 1. ナビゲーションバー全体を画像の上に重ねる */
+/* --- メニューバーを画像に重ねる --- */
 .masthead {
-  position: absolute !important;
-  top: 0;
-  width: 100%;
-  background-color: transparent !important; /* 背景を透明にする */
-  border-bottom: none !important;           /* 境界線を消す */
-  z-index: 100;                             /* 画像より手前に表示 */
+  position: absolute !important; /* 場所を固定しない */
+  z-index: 100 !important;      /* 最前面に持ってくる */
+  width: 100% !important;
+  background-color: transparent !important; /* 背景を透明に */
+  border-bottom: none !important;           /* 下線を消す */
 }
 
-/* 2. メニューの文字を白くし、影をつけて読みやすくする */
-.masthead__menu-item a, 
+/* ページ全体の初期位置が、メニューの高さ分下がらないようにする */
+.initial-content, 
+#main {
+  margin-top: 0 !important;
+}
+
+/* メニューの文字を白く固定する（画像の上で読むため） */
+.masthead__menu-item a,
 .site-title {
   color: #fff !important;
   text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
-  font-weight: bold !important;
-}
-
-/* 3. ヘッダー画像自体の高さを確保し、中身がメニューに隠れないよう調整 */
-.page__hero--overlay {
-  padding-top: 100px !important; /* メニューの高さ分、中の名前を少し下げる */
 }
