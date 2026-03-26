@@ -14,7 +14,7 @@
 
 ## News
 
-<img src="8d7d81d8-34d3-45c1-a9c7-a875fae02b31~1.jpg" class="align-right" style="width: 250px; margin-top: -50px;">
+<img src="/images/8d7d81d8-34d3-45c1-a9c7-a875fae02b31~1.jpg" class="align-right" style="width: 250px; margin-top: -50px;">
 
 * 2026年3月 ウェブページを公開しました。
 
