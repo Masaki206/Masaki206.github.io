@@ -1,4 +1,4 @@
-# 井上 雅貴 / Masaki Inoue
+# <span style="font-size: 2.5em; font-weight: bold;">井上 雅貴 / Masaki Inoue
 
 ## About
 
