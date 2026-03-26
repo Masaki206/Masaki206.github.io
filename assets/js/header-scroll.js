@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!masthead) return;
 
   function updateHeader() {
-    const trigger = window.innerHeight * 0.45;
+    const trigger = window.innerHeight * 0.30;
     if (window.scrollY > trigger) {
       masthead.classList.add("scrolled");
     } else {
