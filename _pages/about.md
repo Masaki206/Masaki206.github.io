@@ -1,9 +1,9 @@
 ---
-layout: home # あるいは archive
-title: "井上 雅貴 / Masaki Inoue" 
+layout: home
+title: "Masaki Inoue / 井上 雅貴"
 header:
   overlay_image: /assets/images/1774550014530.jpg
-  overlay_filter: 0.5 # 画像を少し暗くして、文字を見やすくする（0〜1）
+  overlay_filter: 0.5
 ---
 
 ## About
