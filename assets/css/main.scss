@@ -64,15 +64,28 @@ html[data-theme='dark'] {
 h1, h2, h3 {
   color: var(--heading-color) !important;
 }
+/* --- デザイン調整用 --- */
+
+/* 1. ヘッダー画像（Hero）を大きくする */
 .page__hero--overlay {
-  padding: 8em 0;
+  min-height: 60vh !important; /* 画面の高さの60%を画像にする */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.page {
-  max-width: 1400px;
+/* 2. 本文の横幅を絞って、両端に「読みやすい余白」を作る */
+.archive, .page__content {
+  max-width: 800px !important; /* 本文の最大幅を800pxに制限 */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 2em 1em !important; /* 上下に余白を追加 */
 }
 
-.page__content {
-  padding-left: 3em;
-  padding-right: 3em;
+/* 3. ヘッダーの中のタイトルを大きく白くする */
+.page__hero--overlay h1 {
+  font-size: 3.5em !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.7) !important;
+  font-weight: bold !important;
 }
