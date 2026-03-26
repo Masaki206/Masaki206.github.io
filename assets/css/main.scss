@@ -98,24 +98,41 @@ h1, h2, h3 {
   border-bottom: none !important;           /* 下線を消す */
   z-index: 10;                              /* 画像より前面に出す */
 }
-/* --- メニューバーを画像に重ねる --- */
+/* ヘッダーを最前面に */
 .masthead {
-  position: absolute !important; /* 場所を固定しない */
-  z-index: 100 !important;      /* 最前面に持ってくる */
-  width: 100% !important;
-  background-color: transparent !important; /* 背景を透明に */
-  border-bottom: none !important;           /* 下線を消す */
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000 !important;
+  background: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-/* ページ全体の初期位置が、メニューの高さ分下がらないようにする */
-.initial-content, 
+/* ヘッダー内の横幅制限を外したい場合 */
+.masthead__inner-wrap {
+  background: transparent !important;
+}
+
+/* メニュー文字色 */
+.masthead__menu-item a,
+.site-title,
+.greedy-nav a {
+  color: #fff !important;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ハンバーガーやアイコン類 */
+.greedy-nav .hidden-links,
+.greedy-nav__toggle,
+.search__toggle {
+  color: #fff !important;
+}
+
+/* 最初の画像をヘッダーの下に押し出さない */
+.initial-content,
 #main {
   margin-top: 0 !important;
-}
-
-/* メニューの文字を白く固定する（画像の上で読むため） */
-.masthead__menu-item a,
-.site-title {
-  color: #fff !important;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.8) !important;
+  padding-top: 0 !important;
 }
