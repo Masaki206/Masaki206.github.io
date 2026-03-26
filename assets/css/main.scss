@@ -190,3 +190,19 @@ html[data-theme="dark"] {
   padding-top: 70px !important;
 }
 */
+:root {
+  --masthead-height: 72px;
+}
+
+/* ヒーロー画像をページ最上部まで持ち上げる */
+.page__hero--overlay,
+.page__hero,
+.page__hero-image {
+  margin-top: calc(-1 * var(--masthead-height)) !important;
+}
+
+/* 画像上のタイトルや中身が上に食い込みすぎたら少し戻す */
+.page__hero--overlay .wrapper,
+.page__hero .wrapper {
+  padding-top: var(--masthead-height) !important;
+}
