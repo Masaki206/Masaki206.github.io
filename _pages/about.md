@@ -1,7 +1,5 @@
-## About Me
+## About
 
-I am a master's student at the University of Tsukuba.
+筑波大学大学院宇宙物理理論研究室で主にブラックホールに関する研究を行っています。
 
-My research focuses on black hole accretion and outflows using general relativistic radiation magnetohydrodynamics (GRRMHD) simulations.
-
-I am particularly interested in super-Eddington accretion flows and high-energy phenomena around black holes.
+ブラックホール周囲に形成される降着円盤は、高光度コンパクト天体のエネルギー源と考えられています。私は特に超臨界降着円盤に興味を持っており、これに関する数値シミュレーションを実施しています。
