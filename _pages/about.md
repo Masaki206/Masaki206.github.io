@@ -13,6 +13,9 @@
 指導教員: 大須賀 健 教授
 
 ## News
+
+<img src="8d7d81d8-34d3-45c1-a9c7-a875fae02b31~1.jpg" class="align-right" style="width: 250px; margin-top: -50px;">
+
 * 2026年3月 ウェブページを公開しました。
 
 ## Contact
@@ -22,3 +25,4 @@
 居室: 計算科学研究センター 2F
 
 E-mail: masaki_at_ccs.tsukuba.ac.jp
+<div style="clear: both;"></div>
