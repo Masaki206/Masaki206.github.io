@@ -26,24 +26,24 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "井上雅貴"
-  pronouns         : # example: "she/her"  
-  bio              : "一般相対論的輻射磁気流体計算, 超臨界ブラックホール"
-  location         : "茨城県, 日本"
-  employer         : "筑波大学　博士前期課程1年　宇宙物理理論研究室　大須賀グループ"
-  uri              : # URL
-  email            : "masaki@ccs.tsukuba.ac.jp" 
+  # name             : "井上雅貴"
+  # pronouns         : # example: "she/her"  
+  # bio              : "一般相対論的輻射磁気流体計算, 超臨界ブラックホール"
+  # location         : "茨城県, 日本"
+  # employer         : "筑波大学　博士前期課程1年　宇宙物理理論研究室　大須賀グループ"
+  # uri              : # URL
+  # email            : "masaki@ccs.tsukuba.ac.jp" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  # googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  # orcid            : "https://orcid.org/yourorcidurl"
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -59,7 +59,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  # bluesky          : "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
