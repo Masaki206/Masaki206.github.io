@@ -65,5 +65,14 @@ h1, h2, h3 {
   color: var(--heading-color) !important;
 }
 .page__hero--overlay {
-  padding: 8em 0;  /* ←ここを増やす（デフォは3emくらい） */
+  padding: 8em 0;
+}
+
+.page {
+  max-width: 1400px;
+}
+
+.page__content {
+  padding-left: 3em;
+  padding-right: 3em;
 }
