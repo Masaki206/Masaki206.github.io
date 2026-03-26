@@ -102,7 +102,7 @@ h1, h2, h3 {
 /* メニューの文字色を白にして、画像の上で見やすくする */
 .masthead__menu-item a {
   color: #fff !important;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* 視認性向上のための影 */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* 視認性向上のため影を入れる */
 }
 
 /* ロゴ（左上の名前部分）も白くする */
