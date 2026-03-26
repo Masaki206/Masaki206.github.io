@@ -1,11 +1,3 @@
----
-layout: home
-title: "Masaki Inoue / 井上 雅貴"
-header:
-  overlay_image: /assets/images/1774550014530.jpg
-  overlay_filter: 0.5
----
-
 ## About
 
 筑波大学大学院宇宙物理理論研究室で主にブラックホールに関する研究を行っています。
