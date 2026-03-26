@@ -93,56 +93,61 @@ h1, h2, h3 {
    Header overlay behavior
    ========================= */
 
-/* ヘッダー自体は常に上に固定 */
+/* ヘッダー全体を上に固定 */
 .masthead {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000 !important;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* 内側の背景もまとめて制御 */
-.masthead,
-.masthead__inner-wrap,
-.greedy-nav {
   background: transparent !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 画像上では文字を白に */
+/* 内側の背景を全部消す */
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .visible-links::after,
+.greedy-nav .hidden-links,
+.masthead__menu ul,
+.masthead__menu-item,
+.navicon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 画像上では文字だけ白 */
 .site-title,
+.site-title:visited,
 .greedy-nav a,
+.greedy-nav a:visited,
 .masthead__menu-item a,
+.masthead__menu-item a:visited,
 .greedy-nav__toggle {
   color: #fff !important;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* スクロール後の状態 */
+/* スクロール後だけ背景を出す */
 .masthead.scrolled,
 .masthead.scrolled .masthead__inner-wrap,
-.masthead.scrolled .greedy-nav {
+.masthead.scrolled .masthead__menu,
+.masthead.scrolled .greedy-nav,
+.masthead.scrolled .greedy-nav .visible-links,
+.masthead.scrolled .masthead__menu ul {
   background: rgba(80, 80, 80, 0.95) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* スクロール後は普通に見やすい文字 */
+/* スクロール後も文字は白でOK */
 .masthead.scrolled .site-title,
 .masthead.scrolled .greedy-nav a,
 .masthead.scrolled .masthead__menu-item a,
 .masthead.scrolled .greedy-nav__toggle {
   color: #fff !important;
   text-shadow: none !important;
-}
-
-/* ページ上部がヘッダーの下に隠れないように調整 */
-.initial-content,
-#main {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
 }
