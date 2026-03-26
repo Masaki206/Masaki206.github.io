@@ -2,7 +2,7 @@
 layout: home
 author_profile: false
 header:
-  overlay_image: /images/1774550014530.jpg
+  overlay_image: /assets/images/1774550014530.jpg
   overlay_filter: 0.5
 ---
 
