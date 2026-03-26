@@ -53,12 +53,12 @@ html[data-theme='dark'] {
   --heading-color: #fcc800;
 }
 
-/* もしブラウザ設定にも連動させたい場合はこれも残しておく */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --heading-color: #fcc800;
-  }
-}
+// /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
+// @media (prefers-color-scheme: dark) {
+//   :root:not([data-theme='light']) {
+//     --heading-color: #fcc800;
+//   }
+// }
 
 /* 見出しに適用 */
 h1, h2, h3 {
