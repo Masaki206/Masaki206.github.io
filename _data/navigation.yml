@@ -10,15 +10,15 @@
 main:
   - title: "ホーム"
     url: /
-
+    
+  - title: "CV"
+    url: /cv/
+  
   - title: "研究内容"
     url: /research/    
 
   - title: "業績"
     url: /publications/    
-    
-  - title: "CV"
-    url: /cv/
 
   - title: "その他"
     url: /other/
