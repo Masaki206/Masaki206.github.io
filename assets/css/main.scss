@@ -41,21 +41,26 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-/* モード共通の変数を定義 */
+/* モード共通の変数を定義（デフォルト：ライト） */
 :root {
-  /* ライトモード時の色 (#00a3af: ターコイズ系) */
   --heading-color: #00a3af; 
 }
 
-/* ダークモードを検知した時の上書き設定 */
+/* テーマ切り替えスイッチに反応させる設定
+   Minimal Mistakesのスイッチは <html> タグの data-theme 属性を書き換えます
+*/
+html[data-theme='dark'] {
+  --heading-color: #fcc800;
+}
+
+/* もしブラウザ設定にも連動させたい場合はこれも残しておく */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* ダークモード時の色 (#fcc800: 向日葵色) */
-    --heading-color: #fcc800; 
+  :root:not([data-theme='light']) {
+    --heading-color: #fcc800;
   }
 }
 
-/* すべてのページの見出し (h1, h2, h3) にこの色を適用 */
+/* 見出しに適用 */
 h1, h2, h3 {
   color: var(--heading-color) !important;
 }
