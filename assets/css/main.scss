@@ -66,7 +66,7 @@ html[data-theme='dark'] {
   }
 
   /* コンテンツエリアの背景も黒に統一 */
-  .page, .archive, .masthead, .page__footer {
+  .page, .archive, .page__footer {
     background-color: #050505 !important;
   }
 
@@ -74,6 +74,9 @@ html[data-theme='dark'] {
   h2 {
     border-bottom: 1px solid #333 !important;
   }
+}
+html[data-theme='dark'] .masthead {
+  background: transparent !important;
 }
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
