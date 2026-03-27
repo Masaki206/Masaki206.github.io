@@ -158,12 +158,14 @@ h1, h2, h3 {
 }
 
 /* ダークモード時 */
-html[data-theme='dark'] .masthead {
-  background: transparent !important;
+html[data-theme='dark'] {
+  --header-solid-bg: rgba(5, 5, 5, 0.95);
+  --header-solid-text: #fff;
+  --header-overlay-text: #fff;
 }
 
-html[data-theme='dark'] .masthead.scrolled {
-  background: rgba(5, 5, 5, 0.95) !important;
+html[data-theme='dark'] .masthead {
+  background: transparent !important;
 }
 
 /* ヘッダー全体を固定 */
@@ -242,6 +244,20 @@ html[data-theme='dark'] .masthead.scrolled {
 .page__hero--overlay,
 .page__hero-image {
   margin-top: 0 !important;
+}
+
+/* ダークモードでスクロール後のヘッダー文字を強制的にはっきり見せる */
+html[data-theme='dark'] .masthead.scrolled .site-title,
+html[data-theme='dark'] .masthead.scrolled .site-title:visited,
+html[data-theme='dark'] .masthead.scrolled .greedy-nav a,
+html[data-theme='dark'] .masthead.scrolled .greedy-nav a:visited,
+html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a,
+html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a:visited,
+html[data-theme='dark'] .masthead.scrolled .greedy-nav__toggle,
+html[data-theme='dark'] .masthead.scrolled .search__toggle {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
 }
 
 /* ヘッダーの高さぶんだけ画像タイトルが隠れないよう微調整したいなら必要に応じて使う
