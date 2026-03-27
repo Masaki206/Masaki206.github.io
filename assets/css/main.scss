@@ -269,34 +269,34 @@ h2 {
 }
 /* --- ホーム（index）のヘッダータイトル：二段構え調整 --- */
 
-/* タイトル全体を囲む要素を整える */
+/* タイトルを囲む要素（h1）に、縦に並べる強力な命令を出す */
 .page__hero-overlay .page__title {
-  font-family: "Noto Serif JP", serif;
-  display: flex;
-  flex-direction: column; /* 縦に並べる（これで上下に分かれます） */
-  align-items: center;    /* 中央に寄せる */
-  line-height: 1.2;       /* 行間を詰める */
+  display: flex !important;
+  flex-direction: column !important; /* 横並びを解除して、縦（上下）に並べる */
+  align-items: center !important;    /* 中央寄せ */
+  line-height: 1.1 !important;       /* 行間をさらに詰める */
+  font-family: "Noto Serif JP", serif; /* 和風のフォント */
 }
 
-/* 上のローマ字部分（小さく、間隔を空ける） */
+/* 上のローマ字部分（小さく、スタイリッシュに） */
 .title-en {
-  font-size: 0.3em !important;   /* かなり小さく */
-  letter-spacing: 0.3em;         /* 文字の間を広げてスタイリッシュに */
-  text-transform: uppercase;     /* 大文字にする */
-  opacity: 0.9;                  /* 少しだけ透かす */
-  margin-bottom: 0.2em;          /* 漢字との隙間を微調整 */
+  font-size: 0.35em !important;   /* 小さく（漢字の35%） */
+  font-weight: 300;               /* 細く */
+  letter-spacing: 0.25em;         /* 文字間隔を広げる */
+  opacity: 0.9;                   /* 少し透かす */
+  margin-bottom: 0.3em;           /* 下の漢字との隙間を微調整 */
 }
 
-/* 下の漢字部分（ドカンと大きく） */
+/* 下の漢字部分（ドカンと大きく、和風に） */
 .title-ja {
-  font-size: 1.4em !important;   /* 大きく */
+  font-size: 1.6em !important;   /* 大きく（ローマ字の4倍以上） */
   font-weight: 700;              /* 太く */
   letter-spacing: 0.1em;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.6); /* 影をしっかりつけて浮き立たせる */
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.6); /* 読みやすく影をつける */
 }
 
 /* スマホ用の微調整 */
 @media (max-width: 600px) {
-  .title-ja { font-size: 1.0em !important; }
-  .title-en { font-size: 0.25em !important; }
+  .title-ja { font-size: 1.2em !important; }
+  .title-en { font-size: 0.3em !important; }
 }
