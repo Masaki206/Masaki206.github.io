@@ -383,6 +383,21 @@ h2 {
   opacity: 1 !important;
   text-shadow: none !important; /* スクロール後に影が残らないように */
 }
+/* --- スクロール後も向日葵色（または青緑）を優先させる修正 --- */
+
+/* 1. スクロール後の全モード共通設定 */
+.masthead.scrolled .masthead__menu-item.active a,
+.masthead.scrolled .masthead__menu-item a:hover {
+  color: var(--heading-color) !important; /* 白ではなく変数の色を強制 */
+  opacity: 1 !important;
+  font-weight: bold !important;
+}
+
+/* 2. ダークモード時のスクロール後をさらに強力に固定 */
+html[data-theme='dark'] .masthead.scrolled .masthead__menu-item.active a,
+html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a:hover {
+  color: var(--heading-color) !important; /* #ffffff をこれで上書き */
+}
 
 .site-title {
   display: none !important;
