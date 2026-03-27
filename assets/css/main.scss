@@ -421,3 +421,14 @@ h2 {
 .site-title {
   display: none !important;
 }
+/* ホームだけ：隠したサイトタイトルに selected が付くので、
+   その直後の「ホーム」もアクティブ見た目にする */
+.greedy-nav .visible-links > li.persist.selected + li > a,
+.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.15em;
+}
