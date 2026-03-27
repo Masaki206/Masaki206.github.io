@@ -7,8 +7,6 @@ header:
   overlay_filter: 0.5
 ---
 
-{% include base_path %}
-
 学歴
 ======
 * 2021年3月 私立拓殖大学第一高等学校 卒業
