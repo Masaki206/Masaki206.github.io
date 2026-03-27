@@ -374,13 +374,14 @@ h2 {
   font-weight: 700;
 }
 /* --- メニューのアクティブ表示（モード別出し分け） --- */
-
 .masthead__menu-item.active a,
-.masthead__menu-item:hover a {
-  /* ここで変数を指定することで、ライト/ダークに合わせて自動で色が変わります */
-  color: var(--heading-color) !important; 
+.masthead.scrolled .masthead__menu-item.active a, /* スクロール後も有効に */
+.masthead__menu-item a:hover,
+.masthead.scrolled .masthead__menu-item a:hover { /* スクロール後も有効に */
+  color: var(--heading-color) !important;
   font-weight: bold !important;
   opacity: 1 !important;
+  text-shadow: none !important; /* スクロール後に影が残らないように */
 }
 
 .site-title {
