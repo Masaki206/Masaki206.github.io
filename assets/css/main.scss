@@ -432,3 +432,13 @@ h2 {
   border-bottom: 2px solid currentColor;
   padding-bottom: 0.15em;
 }
+/* ホームだけ：hoverしても active 見た目を維持する */
+.greedy-nav .visible-links > li.persist.selected + li > a:hover,
+.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a:hover {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  border-bottom: 2px solid currentColor !important;
+  padding-bottom: 0.15em;
+}
