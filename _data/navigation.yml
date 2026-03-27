@@ -16,7 +16,7 @@ main:
     url: /research/
   - title: "業績"
     url: /publications/
-　- title: "English"
+  - title: "English"
     url: /en/
 
   # - title: "その他"
