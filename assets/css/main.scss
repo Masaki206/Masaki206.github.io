@@ -281,7 +281,7 @@ h2 {
   top: -0.8em;     /* ← ここで高さ調整 */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.35em;
+  font-size: 0.20em;
   letter-spacing: 0.25em;
   opacity: 0.8;
   white-space: nowrap;
@@ -289,6 +289,6 @@ h2 {
 
 /* 漢字（メイン） */
 .title-ja {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
 }
