@@ -1,7 +1,7 @@
 ---
 layout: splash
 # title: の中身をクラス付きのHTMLで書きます
-title: "<span class='title-en'>INOUE MASAKI</span><span class='title-ja'>井上 雅貴</span>"
+title: "<span class='title-en'>INOUE MASAKI</span><span class='title-ja'>井 上 雅 貴</span>"
 author_profile: false
 header:
   overlay_image: 1774550014530.jpg
