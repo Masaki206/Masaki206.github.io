@@ -23,7 +23,8 @@ main:
   # - title: "その他"
   #   url: /other/
 
-  - title: "LANGUAGE"
+- title: "LANGUAGE"
+    url: "#"
     children:
       - title: "ENGLISH/英語"
         url: /en/
