@@ -426,12 +426,41 @@ h2 {
   display: none !important;
 }
 /* =========================
-   Home active fix
-   左上の隠したタイトルに selected が付くので、
-   その直後の「ホーム」を active 扱いにする
+   Navigation active / hover
    ========================= */
 
-/* 通常時 */
+/* まず既定の白い線を消す */
+.greedy-nav .visible-links a,
+.greedy-nav .visible-links a:hover,
+.greedy-nav .visible-links a:focus,
+.masthead__menu-item > a,
+.masthead__menu-item > a:hover,
+.masthead__menu-item > a:focus {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  background-image: none !important;
+}
+
+/* 通常ページの active */
+.masthead__menu-item.selected > a,
+.masthead__menu-item.persist.selected > a,
+.masthead__menu-item--active > a,
+.greedy-nav .selected > a,
+.greedy-nav .current > a,
+.greedy-nav a[aria-current="page"] {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid currentColor !important;
+  padding-bottom: 0.15em;
+}
+
+/* Home だけの補正
+   隠したタイトルリンクに selected が付くので、その次の li を active 扱いにする */
 .greedy-nav .visible-links > li.persist.selected + li > a,
 .masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a {
   color: var(--heading-color) !important;
@@ -439,29 +468,44 @@ h2 {
   opacity: 1 !important;
   text-shadow: none !important;
   text-decoration: none !important;
+  box-shadow: none !important;
   border-bottom: 2px solid currentColor !important;
   padding-bottom: 0.15em;
 }
 
-/* hover時も見た目を固定 */
+/* hover */
+.masthead__menu-item > a:hover,
+.greedy-nav .visible-links a:hover {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid currentColor !important;
+  padding-bottom: 0.15em;
+}
+
+/* Home 補正対象でも hover 時に見た目を固定 */
 .greedy-nav .visible-links > li.persist.selected + li > a:hover,
-.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a:hover,
 .greedy-nav .visible-links > li.persist.selected + li:hover > a,
+.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a:hover,
 .masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li:hover > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
   opacity: 1 !important;
   text-shadow: none !important;
   text-decoration: none !important;
+  box-shadow: none !important;
   border-bottom: 2px solid currentColor !important;
   padding-bottom: 0.15em;
 }
 
-/* 疑似要素の線が出る場合を止める */
-.greedy-nav .visible-links > li.persist.selected + li > a::before,
-.greedy-nav .visible-links > li.persist.selected + li > a::after,
-.greedy-nav .visible-links > li.persist.selected + li > a:hover::before,
-.greedy-nav .visible-links > li.persist.selected + li > a:hover::after {
+/* 疑似要素由来の白い線を止める */
+.greedy-nav .visible-links a::before,
+.greedy-nav .visible-links a::after,
+.masthead__menu-item > a::before,
+.masthead__menu-item > a::after {
   display: none !important;
   content: none !important;
 }
