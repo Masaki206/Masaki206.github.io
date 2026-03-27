@@ -16,13 +16,8 @@ main:
     url: /research/
   - title: "業績"
     url: /publications/
-  - title: "LANGUAGE"
-    url: "#"
-    children:
-      - title: "ENGLISH/英語"
-        url: /en/
-      - title: "JAPANESE/日本語"
-        url: /
+　- title: "English"
+    url: /en/
 
   # - title: "その他"
   #   url: /other/
