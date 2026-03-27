@@ -153,14 +153,14 @@ h1, h2, h3 {
 /* モードごとの色 */
 :root {
   --header-solid-bg: rgba(255, 255, 255, 0.95);
-  --header-solid-text: #222;
+  --header-solid-text: #00a3af;
   --header-overlay-text: #fff;
 }
 
 /* ダークモード時 */
 html[data-theme='dark'] {
-  --header-solid-bg: rgba(5, 5, 5, 0.82);
-  --header-solid-text: #fff;
+  --header-solid-bg: rgba(5, 5, 5, 0.95);
+  --header-solid-text: #fcc800;
   --header-overlay-text: #fff;
 }
 
