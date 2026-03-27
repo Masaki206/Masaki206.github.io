@@ -20,8 +20,8 @@ main:
   - title: "業績"
     url: /publications/    
 
-  - title: "その他"
-    url: /other/
+  # - title: "その他"
+  #   url: /other/
 
   - title: "English"
     url: /en/
