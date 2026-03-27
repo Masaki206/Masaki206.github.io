@@ -269,34 +269,26 @@ h2 {
 }
 /* --- ホーム（index）のヘッダータイトル：二段構え調整 --- */
 
-/* タイトルを囲む要素（h1）に、縦に並べる強力な命令を出す */
-.page__hero-overlay .page__title {
-  display: flex !important;
-  flex-direction: column !important; /* 横並びを解除して、縦（上下）に並べる */
-  align-items: center !important;    /* 中央寄せ */
-  line-height: 1.1 !important;       /* 行間をさらに詰める */
-  font-family: "Noto Serif JP", serif; /* 和風のフォント */
+.page__hero--overlay .page__title {
+  position: relative;
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
 }
 
-/* 上のローマ字部分（小さく、スタイリッシュに） */
+/* ローマ字（上に乗せる） */
 .title-en {
-  font-size: 0.35em !important;   /* 小さく（漢字の35%） */
-  font-weight: 300;               /* 細く */
-  letter-spacing: 0.25em;         /* 文字間隔を広げる */
-  opacity: 0.9;                   /* 少し透かす */
-  margin-bottom: 0.3em;           /* 下の漢字との隙間を微調整 */
+  position: absolute;
+  top: -0.8em;     /* ← ここで高さ調整 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.35em;
+  letter-spacing: 0.25em;
+  opacity: 0.8;
+  white-space: nowrap;
 }
 
-/* 下の漢字部分（ドカンと大きく、和風に） */
+/* 漢字（メイン） */
 .title-ja {
-  font-size: 1.6em !important;   /* 大きく（ローマ字の4倍以上） */
-  font-weight: 700;              /* 太く */
-  letter-spacing: 0.1em;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.6); /* 読みやすく影をつける */
-}
-
-/* スマホ用の微調整 */
-@media (max-width: 600px) {
-  .title-ja { font-size: 1.2em !important; }
-  .title-en { font-size: 0.3em !important; }
+  font-size: 3rem;
+  font-weight: 700;
 }
