@@ -164,8 +164,14 @@ html[data-theme='dark'] {
   --header-overlay-text: #fff;
 }
 
-html[data-theme='dark'] .masthead {
+/* 画像上では透明 */
+html[data-theme='dark'] .masthead:not(.scrolled) {
   background: transparent !important;
+}
+
+/* スクロール後は漆黒 */
+html[data-theme='dark'] .masthead.scrolled {
+  background: rgba(5, 5, 5, 0.95) !important;
 }
 
 /* ヘッダー全体を固定 */
