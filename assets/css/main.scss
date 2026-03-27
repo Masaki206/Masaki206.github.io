@@ -106,8 +106,28 @@ html[data-theme='dark'] .page__footer {
    画面高さ不足対策（余白防止）
    ========================= */
 
-html[data-theme='dark'] #main {
-  min-height: calc(100vh - 260px) !important;
+// html[data-theme='dark'] #main {
+//   min-height: calc(100vh - 260px) !important;
+// }
+html[data-theme='dark'],
+html[data-theme='dark'] body {
+  background-color: #050505 !important;
+}
+
+html[data-theme='dark'] #main,
+html[data-theme='dark'] .initial-content,
+html[data-theme='dark'] .layout--single,
+html[data-theme='dark'] .page,
+html[data-theme='dark'] .page__inner-wrap,
+html[data-theme='dark'] .archive,
+html[data-theme='dark'] .archive__item,
+html[data-theme='dark'] .page__content,
+html[data-theme='dark'] .page__footer,
+html[data-theme='dark'] .page__footer footer,
+html[data-theme='dark'] .page__footer-follow,
+html[data-theme='dark'] .page__footer-copyright {
+  background-color: #050505 !important;
+  color: #e0e0e0 !important;
 }
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
