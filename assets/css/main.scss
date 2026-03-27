@@ -373,30 +373,42 @@ h2 {
   font-size: 4rem;
   font-weight: 700;
 }
-/* --- メニューのアクティブ表示（モード別出し分け） --- */
-.masthead__menu-item.active a,
-.masthead.scrolled .masthead__menu-item.active a, /* スクロール後も有効に */
-.masthead__menu-item a:hover,
-.masthead.scrolled .masthead__menu-item a:hover { /* スクロール後も有効に */
+/* =========================
+   Navigation active / hover
+   ========================= */
+
+/* 現在いるページ */
+.masthead__menu-item--active a,
+.greedy-nav .active > a {
   color: var(--heading-color) !important;
-  font-weight: bold !important;
+  font-weight: 700 !important;
   opacity: 1 !important;
-  text-shadow: none !important; /* スクロール後に影が残らないように */
-}
-/* --- スクロール後も向日葵色（または青緑）を優先させる修正 --- */
-
-/* 1. スクロール後の全モード共通設定 */
-.masthead.scrolled .masthead__menu-item.active a,
-.masthead.scrolled .masthead__menu-item a:hover {
-  color: var(--heading-color) !important; /* 白ではなく変数の色を強制 */
-  opacity: 1 !important;
-  font-weight: bold !important;
+  text-shadow: none !important;
+  border-bottom: 2px solid currentColor;
 }
 
-/* 2. ダークモード時のスクロール後をさらに強力に固定 */
-html[data-theme='dark'] .masthead.scrolled .masthead__menu-item.active a,
-html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a:hover {
-  color: var(--heading-color) !important; /* #ffffff をこれで上書き */
+/* ホバー時 */
+.masthead__menu-item a:hover,
+.greedy-nav a:hover {
+  color: var(--heading-color) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* スクロール後も active を維持 */
+.masthead.scrolled .masthead__menu-item--active a,
+.masthead.scrolled .greedy-nav .active > a {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  border-bottom: 2px solid currentColor;
+}
+
+/* ダークモードでも active 色を維持 */
+html[data-theme='dark'] .masthead.scrolled .masthead__menu-item--active a,
+html[data-theme='dark'] .masthead.scrolled .greedy-nav .active > a {
+  color: var(--heading-color) !important;
 }
 
 .site-title {
