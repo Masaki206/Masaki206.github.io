@@ -56,9 +56,16 @@
 // }
 
 /* ダークモードの設定を上書き */
+/* =========================
+   Dark Mode Override
+   ========================= */
+
 html[data-theme='dark'] {
+
+  /* --- カラー設定 --- */
   --heading-color: #fcc800;
 
+  /* --- ページ全体の背景と文字色 --- */
   body,
   #main,
   .initial-content,
@@ -67,33 +74,40 @@ html[data-theme='dark'] {
   .page__inner-wrap,
   .archive,
   .archive__item,
-  .page__content,
-  .page__footer {
+  .page__content {
     background-color: #050505 !important;
     color: #e0e0e0 !important;
   }
 
+  /* --- 見出しの下線 --- */
   h2 {
     border-bottom: 1px solid #333 !important;
   }
 }
-html[data-theme='dark'] .page__footer {
-  background-color: #050505 !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
 
-html[data-theme='dark'] .page__footer footer {
-  background-color: #050505 !important;
-}
+/* =========================
+   Footer調整（余白＆色統一）
+   ========================= */
 
+html[data-theme='dark'] .page__footer,
+html[data-theme='dark'] .page__footer footer,
 html[data-theme='dark'] .page__footer-follow,
 html[data-theme='dark'] .page__footer-copyright {
   background-color: #050505 !important;
 }
+
+/* フッター上の謎の余白を消す */
+html[data-theme='dark'] .page__footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* =========================
+   画面高さ不足対策（余白防止）
+   ========================= */
+
 html[data-theme='dark'] #main {
   min-height: calc(100vh - 260px) !important;
-  background-color: #050505 !important;
 }
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
