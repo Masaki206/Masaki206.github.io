@@ -153,14 +153,14 @@ h1, h2, h3 {
 /* モードごとの色 */
 :root {
   --header-solid-bg: rgba(255, 255, 255, 0.95);
-  --header-solid-text: #00a3af;
+  --header-solid-text: #fff;
   --header-overlay-text: #fff;
 }
 
 /* ダークモード時 */
 html[data-theme='dark'] {
   --header-solid-bg: rgba(5, 5, 5, 0.95);
-  --header-solid-text: #fcc800;
+  --header-solid-text: #fff;
   --header-overlay-text: #fff;
 }
 
@@ -447,4 +447,16 @@ h2 {
 .masthead__menu-item > a::after {
   display: none !important;
   content: none !important;
+}
+/* スクロール後のホバー */
+.masthead.scrolled .masthead__menu-item > a:hover,
+.masthead.scrolled .greedy-nav .visible-links a:hover {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid currentColor !important;
+  padding-bottom: 0.15em;
 }
