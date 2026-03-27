@@ -460,3 +460,12 @@ h2 {
   border-bottom: 2px solid currentColor !important;
   padding-bottom: 0.15em;
 }
+/* ライトモード：選択中タブは常に強調色にする */
+.masthead.scrolled .masthead__menu-item.selected > a,
+.masthead.scrolled .masthead__menu-item.persist.selected > a,
+.masthead.scrolled .masthead__menu-item--active > a,
+.masthead.scrolled .greedy-nav .selected > a,
+.masthead.scrolled .greedy-nav .current > a,
+.masthead.scrolled .greedy-nav a[aria-current="page"] {
+  color: var(--heading-color) !important;
+}
