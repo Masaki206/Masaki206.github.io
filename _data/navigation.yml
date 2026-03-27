@@ -10,26 +10,23 @@
 main:
   - title: "ホーム"
     url: /
-    
   - title: "CV"
     url: /cv/
-  
   - title: "研究内容"
-    url: /research/    
-
+    url: /research/
   - title: "業績"
-    url: /publications/    
-
-  # - title: "その他"
-  #   url: /other/
-
-　- title: "LANGUAGE"
+    url: /publications/
+  - title: "LANGUAGE"
     url: "#"
     children:
       - title: "ENGLISH/英語"
         url: /en/
       - title: "JAPANESE/日本語"
         url: /
+
+  # - title: "その他"
+  #   url: /other/
+
   # - title: "CV"
   #   url: /cv-json/
     
