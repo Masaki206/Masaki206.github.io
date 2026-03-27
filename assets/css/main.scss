@@ -91,6 +91,10 @@ html[data-theme='dark'] .page__footer-follow,
 html[data-theme='dark'] .page__footer-copyright {
   background-color: #050505 !important;
 }
+html[data-theme='dark'] #main {
+  min-height: calc(100vh - 260px) !important;
+  background-color: #050505 !important;
+}
 
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
 // @media (prefers-color-scheme: dark) {
