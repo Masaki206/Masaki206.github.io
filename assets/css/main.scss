@@ -267,3 +267,37 @@ h2 {
   font-size: 0.9em;
   color: #ccc;
 }
+/* --- ホーム（index）のヘッダータイトル調整 --- */
+
+/* 1. タイトルエリア全体（h1）の設定 */
+.page__lead {
+  font-family: "Noto Serif JP", serif; /* 和風のフォントにする（お好みで） */
+  text-align: center;                  /* 中央寄せ */
+}
+
+/* 2. ローマ字部分（NAMAE）の設定 */
+.page__lead .title-en {
+  display: block;                /* 改行させる */
+  font-size: 0.4em !important;   /* 小さくする（元のタイトルの40%） */
+  font-weight: 300;              /* 細めにする */
+  letter-spacing: 0.2em;         /* 文字間隔を広げる */
+  margin-bottom: -0.5em;         /* 下の日本語との間隔を詰める */
+  opacity: 0.8;                  /* 少し透明にする */
+  text-transform: uppercase;     /* 全て大文字にする（お好みで） */
+}
+
+/* 3. 日本語部分（名前）の設定 */
+.page__lead .title-ja {
+  display: block;                /* 改行させる */
+  font-size: 1.8em !important;   /* 大きくする（元のタイトルの1.8倍） */
+  font-weight: 700;              /* 太くする */
+  margin-top: 0;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.5); /* 読みやすく影をつける */
+}
+
+/* 4. スマホ（狭い画面）での調整 */
+@media (max-width: 600px) {
+  .page__lead .title-ja {
+    font-size: 1.4em !important; /* スマホでは少し小さく */
+  }
+}
