@@ -238,3 +238,32 @@ html[data-theme="dark"] {
 h2 {
   overflow: hidden;
 }
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pub-list li {
+  margin-bottom: 1.5em;
+}
+
+.pub-date {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 0.2em;
+}
+
+.pub-title {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.pub-authors {
+  font-size: 0.95em;
+  margin-bottom: 0.2em;
+}
+
+.pub-venue {
+  font-size: 0.9em;
+  color: #ccc;
+}
