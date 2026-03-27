@@ -396,6 +396,10 @@ h2 {
   color: var(--heading-color) !important;
   opacity: 1 !important;
   text-shadow: none !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid currentColor !important;
+  padding-bottom: 0.15em;
 }
 
 /* スクロール後の現在ページ */
@@ -421,24 +425,43 @@ h2 {
 .site-title {
   display: none !important;
 }
-/* ホームだけ：隠したサイトタイトルに selected が付くので、
-   その直後の「ホーム」もアクティブ見た目にする */
+/* =========================
+   Home active fix
+   左上の隠したタイトルに selected が付くので、
+   その直後の「ホーム」を active 扱いにする
+   ========================= */
+
+/* 通常時 */
 .greedy-nav .visible-links > li.persist.selected + li > a,
 .masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
   opacity: 1 !important;
   text-shadow: none !important;
-  border-bottom: 2px solid currentColor;
+  text-decoration: none !important;
+  border-bottom: 2px solid currentColor !important;
   padding-bottom: 0.15em;
 }
-/* ホームだけ：hoverしても active 見た目を維持する */
+
+/* hover時も見た目を固定 */
 .greedy-nav .visible-links > li.persist.selected + li > a:hover,
-.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a:hover {
+.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li > a:hover,
+.greedy-nav .visible-links > li.persist.selected + li:hover > a,
+.masthead.scrolled .greedy-nav .visible-links > li.persist.selected + li:hover > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
   opacity: 1 !important;
   text-shadow: none !important;
+  text-decoration: none !important;
   border-bottom: 2px solid currentColor !important;
   padding-bottom: 0.15em;
+}
+
+/* 疑似要素の線が出る場合を止める */
+.greedy-nav .visible-links > li.persist.selected + li > a::before,
+.greedy-nav .visible-links > li.persist.selected + li > a::after,
+.greedy-nav .visible-links > li.persist.selected + li > a:hover::before,
+.greedy-nav .visible-links > li.persist.selected + li > a:hover::after {
+  display: none !important;
+  content: none !important;
 }
