@@ -291,11 +291,12 @@ html[data-theme='dark'] .masthead.scrolled .search__toggle {
 
 /* 画像を右寄せにして、左側に文字を回り込ませる */
 .align-right {
-  float: right;         /* 右に寄せる */
-  margin-left: 2em;     /* 左側の文字との間に余白を作る */
-  margin-bottom: 1em;   /* 下側の文字との間に余白を作る */
-  border-radius: 8px;   /* 角を少し丸くする（お好みで） */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* うっすら影をつける（お好みで） */
+  float: right;
+  width: 250px;
+  margin-left: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* 画面が狭いスマホでは、回り込みを解除して縦に並べる */
@@ -308,13 +309,13 @@ html[data-theme='dark'] .masthead.scrolled .search__toggle {
   }
 }
 
-/* --- 見出しの線を画像の手前で止める --- */
-.align-right {
-  float: right;
-  width: 250px;
-  margin-left: 20px;
-  margin-bottom: 12px;
-}
+// /* --- 見出しの線を画像の手前で止める --- */
+// .align-right {
+//   float: right;
+//   width: 250px;
+//   margin-left: 20px;
+//   margin-bottom: 12px;
+// }
 
 h2 {
   overflow: hidden;
@@ -378,42 +379,43 @@ h2 {
    Navigation active / hover
    ========================= */
 
-/* 通常時の hover */
-.masthead__menu-item a:hover,
+/* 現在ページ（selected） */
+.masthead__menu-item.selected > a,
+.greedy-nav .selected > a {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.15em;
+}
+
+/* 通常時ホバー */
+.masthead__menu-item > a:hover,
 .greedy-nav a:hover {
   color: var(--heading-color) !important;
   opacity: 1 !important;
   text-shadow: none !important;
 }
 
-/* 現在ページ（active） */
-.masthead__menu-item--active a,
-.greedy-nav .visible-links .active > a,
-.greedy-nav .active > a {
+/* スクロール後の現在ページ */
+.masthead.scrolled .masthead__menu-item.selected > a,
+.masthead.scrolled .greedy-nav .selected > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
   opacity: 1 !important;
   text-shadow: none !important;
   border-bottom: 2px solid currentColor;
+  padding-bottom: 0.15em;
 }
 
-/* スクロール後の hover */
-.masthead.scrolled .masthead__menu-item a:hover,
+/* スクロール後のホバー */
+.masthead.scrolled .masthead__menu-item > a:hover,
 .masthead.scrolled .greedy-nav a:hover {
   color: var(--heading-color) !important;
   opacity: 1 !important;
   text-shadow: none !important;
-}
-
-/* スクロール後の active */
-.masthead.scrolled .masthead__menu-item--active a,
-.masthead.scrolled .greedy-nav .visible-links .active > a,
-.masthead.scrolled .greedy-nav .active > a {
-  color: var(--heading-color) !important;
   font-weight: 700 !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  border-bottom: 2px solid currentColor;
 }
 
 .site-title {
