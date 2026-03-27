@@ -1,6 +1,7 @@
 ---
 layout: splash
 title: "Curriculum Vitae"
+permalink: /cv/
 author_profile: false
 header:
   overlay_image: 1774550014530.jpg
