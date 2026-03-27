@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Masaki Inoue"
+title: "<a href='/' style='color: inherit; text-decoration: none;'>Masaki Inoue</a>"
 permalink: /en/
 author_profile: false
 header:
