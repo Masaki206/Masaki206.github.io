@@ -57,28 +57,26 @@
 
 /* ダークモードの設定を上書き */
 html[data-theme='dark'] {
-  --heading-color: #fcc800;    /* 見出しの色（向日葵色） */
-  
-  /* 背景色と文字色の設定 */
-  body {
-    background-color: #050505 !important; /* 漆黒（少しだけ質感を残した黒） */
-    color: #e0e0e0 !important;           /* 文字を真っ白ではなく少しグレーにすると目が疲れません */
-  }
+  --heading-color: #fcc800;
 
-  /* コンテンツエリアの背景も黒に統一 */
-  .page, .archive, .page__footer {
+  body,
+  #main,
+  .initial-content,
+  .layout--single,
+  .page,
+  .page__inner-wrap,
+  .archive,
+  .archive__item,
+  .page__content,
+  .page__footer {
     background-color: #050505 !important;
+    color: #e0e0e0 !important;
   }
 
-  /* 線の色を少し暗めにして浮かび上がらせる */
   h2 {
     border-bottom: 1px solid #333 !important;
   }
 }
-html[data-theme='dark'] .masthead {
-  background: transparent !important;
-}
-
 // /* もしブラウザ設定にも連動させたい場合はこれも残しておく */
 // @media (prefers-color-scheme: dark) {
 //   :root:not([data-theme='light']) {
@@ -127,10 +125,12 @@ h1, h2, h3 {
 }
 
 /* ダークモード時 */
-html[data-theme="dark"] {
-  --header-solid-bg: rgba(80, 80, 80, 0.95);
-  --header-solid-text: #fff;
-  --header-overlay-text: #fff;
+html[data-theme='dark'] .masthead {
+  background: transparent !important;
+}
+
+html[data-theme='dark'] .masthead.scrolled {
+  background: rgba(80, 80, 80, 0.95) !important;
 }
 
 /* ヘッダー全体を固定 */
