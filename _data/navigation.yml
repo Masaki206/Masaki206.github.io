@@ -25,7 +25,13 @@ main:
 
   - title: "English"
     url: /en/
-    
+
+  - title: "LANGUAGE"
+    children:
+      - title: "ENGLISH/英語"
+        url: /en/
+      - title: "JAPANESE/日本語"
+        url: /
   # - title: "CV"
   #   url: /cv-json/
     
