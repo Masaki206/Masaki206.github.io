@@ -159,7 +159,7 @@ h1, h2, h3 {
 
 /* ダークモード時 */
 html[data-theme='dark'] {
-  --header-solid-bg: rgba(5, 5, 5, 0.95);
+  --header-solid-bg: rgba(5, 5, 5, 0.82);
   --header-solid-text: #fff;
   --header-overlay-text: #fff;
 }
@@ -250,20 +250,6 @@ html[data-theme='dark'] .masthead.scrolled {
 .page__hero--overlay,
 .page__hero-image {
   margin-top: 0 !important;
-}
-
-/* ダークモードでスクロール後のヘッダー文字を強制的にはっきり見せる */
-html[data-theme='dark'] .masthead.scrolled .site-title,
-html[data-theme='dark'] .masthead.scrolled .site-title:visited,
-html[data-theme='dark'] .masthead.scrolled .greedy-nav a,
-html[data-theme='dark'] .masthead.scrolled .greedy-nav a:visited,
-html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a,
-html[data-theme='dark'] .masthead.scrolled .masthead__menu-item a:visited,
-html[data-theme='dark'] .masthead.scrolled .greedy-nav__toggle,
-html[data-theme='dark'] .masthead.scrolled .search__toggle {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
 }
 
 /* ヘッダーの高さぶんだけ画像タイトルが隠れないよう微調整したいなら必要に応じて使う
@@ -373,53 +359,6 @@ h2 {
 .title-ja {
   font-size: 4rem;
   font-weight: 700;
-}
-
-/* =========================
-   Navigation active / hover
-   ========================= */
-
-/* 現在ページ（selected） */
-.masthead__menu-item.selected > a,
-.greedy-nav .selected > a {
-  color: var(--heading-color) !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  border-bottom: 2px solid currentColor;
-  padding-bottom: 0.15em;
-}
-
-/* 通常時ホバー */
-.masthead__menu-item > a:hover,
-.greedy-nav a:hover {
-  color: var(--heading-color) !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  border-bottom: 2px solid currentColor !important;
-  padding-bottom: 0.15em;
-}
-
-/* スクロール後の現在ページ */
-.masthead.scrolled .masthead__menu-item.selected > a,
-.masthead.scrolled .greedy-nav .selected > a {
-  color: var(--heading-color) !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  border-bottom: 2px solid currentColor;
-  padding-bottom: 0.15em;
-}
-
-/* スクロール後のホバー */
-.masthead.scrolled .masthead__menu-item > a:hover,
-.masthead.scrolled .greedy-nav a:hover {
-  color: var(--heading-color) !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  font-weight: 700 !important;
 }
 
 .site-title {
