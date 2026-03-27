@@ -278,12 +278,12 @@ h2 {
 /* ローマ字（上に乗せる） */
 .title-en {
   position: absolute;
-  top: -1.0em;     /* ← ここで高さ調整 */
+  top: -1.2em;     /* ← ここで高さ調整 */
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.25em;
   letter-spacing: 0.2em;
-  opacity: 0.8;
+  opacity: 0.75;
   white-space: nowrap;
 }
 
