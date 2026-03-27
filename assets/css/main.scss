@@ -373,12 +373,22 @@ h2 {
   font-size: 4rem;
   font-weight: 700;
 }
+
 /* =========================
    Navigation active / hover
    ========================= */
 
-/* 現在いるページ */
+/* 通常時の hover */
+.masthead__menu-item a:hover,
+.greedy-nav a:hover {
+  color: var(--heading-color) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* 現在ページ（active） */
 .masthead__menu-item--active a,
+.greedy-nav .visible-links .active > a,
 .greedy-nav .active > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
@@ -387,28 +397,23 @@ h2 {
   border-bottom: 2px solid currentColor;
 }
 
-/* ホバー時 */
-.masthead__menu-item a:hover,
-.greedy-nav a:hover {
+/* スクロール後の hover */
+.masthead.scrolled .masthead__menu-item a:hover,
+.masthead.scrolled .greedy-nav a:hover {
   color: var(--heading-color) !important;
   opacity: 1 !important;
   text-shadow: none !important;
 }
 
-/* スクロール後も active を維持 */
+/* スクロール後の active */
 .masthead.scrolled .masthead__menu-item--active a,
+.masthead.scrolled .greedy-nav .visible-links .active > a,
 .masthead.scrolled .greedy-nav .active > a {
   color: var(--heading-color) !important;
   font-weight: 700 !important;
   opacity: 1 !important;
   text-shadow: none !important;
   border-bottom: 2px solid currentColor;
-}
-
-/* ダークモードでも active 色を維持 */
-html[data-theme='dark'] .masthead.scrolled .masthead__menu-item--active a,
-html[data-theme='dark'] .masthead.scrolled .greedy-nav .active > a {
-  color: var(--heading-color) !important;
 }
 
 .site-title {
