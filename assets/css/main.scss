@@ -373,3 +373,20 @@ h2 {
   font-size: 4rem;
   font-weight: 700;
 }
+/* --- メニューのアクティブ表示（モード別出し分け） --- */
+
+/* 1. ダークモード（またはデフォルト）の時：向日葵色 */
+.masthead__menu-item.active a,
+.masthead__menu-item:hover a {
+  color: #fcc800 !important; 
+  font-weight: bold !important;
+  opacity: 1 !important;
+}
+
+/* 2. ライトモードの時：新橋色 (#00a3af) に上書き */
+html[data-theme="light"] {
+  .masthead__menu-item.active a,
+  .masthead__menu-item:hover a {
+    color: #00a3af !important;
+  }
+}
