@@ -14,4 +14,4 @@ In paticularly, I'm interested in supercritical accretion disk.
 
 ## Education
 * **M.S. in Physics**, University of Tsukuba (Apr. 2025 - Present)
-* **B.S. in Physics**, Shinshu University (Mar. 2025)
+* **B.S. in Physics**, Shinshu University (Apr. 2021 - Mar. 2025)
